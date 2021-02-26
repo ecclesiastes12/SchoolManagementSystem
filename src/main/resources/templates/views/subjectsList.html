@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+
+		<div class="card cardspace">
+
+			<div class="card card-body">
+				<form method="post" th:object="${subjects}" th:action="@{/courses}">
+					<div class="form-row">
+						<div class="form-group col">
+							<label for="coursecode">Course Code</label> <input type="text"
+								class="form-control" id="coursecode">
+							<!-- <div class="text text-danger"
+										th:if="${#fields.hasErrors('coursecode')}"
+										th:errors="*{coursecode}"></div> -->
+						</div>
+						<div class="form-group col">
+						 <input type="hidden"
+								class="form-control" id="coursecode">
+												<button type="submit" class="btn btn-primary">Submit</button>
+
+							<!-- <div class="text text-danger"
+										th:if="${#fields.hasErrors('subjectname')}"
+										th:errors="*{subjectname}"></div> -->
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+
+		<div class="card cardspace">
+
+			<div class="card card-body">
+				<!-- <div class="form-row">
+ -->
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+
+							<th scope="col">Subject Code</th>
+							<th scope="col">Subject Name</th>
+
+							<th width="50px"></th>
+							<th width="50px"></th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr th:each="subject:${subjects}">
+							<td th:text="${subject.coursecode}"></td>
+							<td th:text="${subject.subjectname}"></td>
+							<td><a href="#"><span class="btn btn-primary fa fa-edit">Edit</span></a></td>
+							<td><a href="#"><span
+									class="btn btn-primary fa fa-trash-alt">Delete</span></a></td>
+						</tr>
+
+
+
+					</tbody>
+				</table>
+
+
+				<!-- 	</div> -->
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+</body>
+</html>

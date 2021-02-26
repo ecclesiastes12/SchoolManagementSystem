@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+
+</head>
+<body>
+	<div layout:fragment="content" class="container mySpace">
+		<!-- NB every page needs this tag for to be able to display -->
+
+		<div class="text-center">
+			<h2>Score Form</h2>
+		</div>
+		<div class="text-right">
+			<button class="btn btn-success">
+				<a href="/listsubjects">view scores</a>
+			</button>
+		</div>
+
+		<form method="post" th:object="${subjects}" th:action="@{/courses}">
+			<div class="form-row">
+				<div class="form-group col">
+					<label for="coursecode">Course Code</label> <input type="text"
+						class="form-control" id="coursecode" th:field="*{coursecode}">
+						<div class="text text-danger"
+										th:if="${#fields.hasErrors('coursecode')}"
+										th:errors="*{coursecode}"></div>
+				</div>
+				<div class="form-group col">
+					<label for="coursename">Course Name</label> <input type="text"
+						class="form-control" id="coursename" th:field="*{subjectname}">
+						<div class="text text-danger"
+										th:if="${#fields.hasErrors('subjectname')}"
+										th:errors="*{subjectname}"></div>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	</div>
+
+
+</body>
+</html>

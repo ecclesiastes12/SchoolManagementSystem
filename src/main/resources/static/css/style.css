@@ -1,0 +1,33 @@
+.mySpace{
+	margin-top:80px;
+	/* margin-left:260px; */
+	width:100%;
+}
+.mySpace.collapse{
+	width:(100% - 70px);
+	margin-left:70px;
+}
+ .mySpace .card {
+	margin-top:10px;
+	padding:10px 10px 10px 10px;
+}
+.cardspace{
+	margin-bottom:10px;
+}
+
+.card-header{
+	background:rbg(234, 236, 238  );
+}
+.ldBtn{
+	border: 2px solid rgba(108, 89, 179, 0.75);
+  border-radius: 40px;
+}
+
+.fnote{
+	margin-top:20px;
+}
+
+.navbar{
+	margin-bottom:20px;
+}
+

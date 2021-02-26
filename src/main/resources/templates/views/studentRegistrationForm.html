@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+
+
+
+
+		<form method="post" th:object="${student}" th:action="@{/register}">
+			<div class="card cardspace">
+				<h5 class="card-header">Student Enrollment</h5>
+				<div class="card card-body">
+					<div class="form-row">
+						<div class="col-9">
+
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="admissionNumber">Admission Number</label> <input
+										type="text" class="form-control" id="admissionNumber"
+										th:field="*{admissionNumber}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('admissionNumber')}"
+										th:errors="*{admissionNumber}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="firstName">First Name</label> <input type="text"
+										class="form-control" id="firstName" th:field="*{firstName}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('firstName')}"
+										th:errors="*{firstName}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="lastName">Last Name</label> <input type="text"
+										class="form-control" id="lastName" th:field="*{lastName}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('lastName')}"
+										th:errors="*{lastName}"></div>
+								</div>
+
+							</div>
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="gender">Gender</label> <select th:field="*{gender}"
+										id="gender" class="form-control">
+										<option value="Select gender">Select gender</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+									</select>
+								</div>
+								<div class="form-group col">
+									<label for="date">Date of Birth</label><input type="date"
+										class="form-control" id="date" th:field="*{date}"
+										placeholder="eg. 12/02/1990" />
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></div>
+								</div>
+
+								<div class="form-group col">
+									<label for="gradeLevel">Class</label> <select
+										th:field="*{gradeLevel}" id="gradeLevel" class="form-control">
+										<option value="N/A">N/A</option>
+										<option value="bb">bb</option>
+									</select>
+
+								</div>
+
+							</div>
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="nationality">Nationality</label> <input type="text"
+										class="form-control" id="nationality"
+										th:field="*{nationality}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('nationality')}"
+										th:errors="*{nationality}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="mobileNumber">Mobile Number</label> <input
+										type="text" class="form-control" id="mobileNumber"
+										th:field="*{mobileNumber}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('mobileNumber')}"
+										th:errors="*{mobileNumber}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="studentemail">Email address</label> <input
+										type="email" class="form-control" id="studentemail"
+										th:field="*{email}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+								</div>
+
+							</div>
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="bloodGroup">Blood Group</label> <input type="text"
+										class="form-control" id="bloodGroup" th:field="*{bloodGroup}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('bloodGroup')}"
+										th:errors="*{bloodGroup}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="religion">Religion</label> <input type="text"
+										class="form-control" id="religion" th:field="*{religion}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('religion')}"
+										th:errors="*{religion}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="admissionDate">Admission Date</label> <input
+										type="date" class="form-control" id="admissionDate"
+										th:field="*{admissionDate}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('admissionDate')}"
+										th:errors="*{admissionDate}"></div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="col-3">
+							<div class="page-header">
+								<h3>Profile Picture</h3>
+							</div>
+							<div>
+								<img alt="Defualt Profile Picture"
+									th:src="@{/img/default-pic.png}" class="img-circle"
+									width="150px" height="138px">
+
+							</div>
+
+							<div class="form-group">
+								<label for="exampleFormControlFile1"></label> <input type="file"
+									class="form-control-file ldBtn" id="exampleFormControlFile1">
+							</div>
+
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="card cardspace">
+				<h5 class="card-header">Student Parent Details</h5>
+				<div class="card card-body">
+					<div class="form-row">
+						<div class="col-9">
+
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="fatherName">Father's Name</label> <input
+										type="text" class="form-control" id="fatherName"
+										th:field="*{fatherName}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('fatherName')}"
+										th:errors="*{fatherName}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="phoneNumber1">Phone Number</label> <input
+										type="text" class="form-control" id="phoneNumber1"
+										th:field="*{fatherNumber}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('fatherNumber')}"
+										th:errors="*{fatherNumber}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="fatherOccupation">Father's Occupation</label> <input
+										type="text" class="form-control" id="fatherOccupation"
+										th:field="*{fatherOccupation}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('fatherOccupation')}"
+										th:errors="*{fatherOccupation}"></div>
+								</div>
+
+
+							</div>
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="motherName">Mother's Name</label> <input
+										type="text" class="form-control" id="motherName"
+										th:field="*{motherName}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('motherName')}"
+										th:errors="*{motherName}"></div>
+								</div>
+								<div class="form-group col">
+									<label for="phoneNumber2">Phone Number</label> <input
+										type="text" class="form-control" id="phoneNumber2"
+										th:field="*{motherNumber}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('motherNumber')}"
+										th:errors="*{motherNumber}"></div>
+								</div>
+
+								<div class="form-group col">
+									<label for="motherOccupation">Mother's Occupation</label> <input
+										type="text" class="form-control" id="motherOccupation"
+										th:field="*{motherOccupation}">
+									<div class="text text-danger"
+										th:if="${#fields.hasErrors('motherOccupation')}"
+										th:errors="*{motherOccupation}"></div>
+								</div>
+
+							</div>
+							<div class="row">
+
+								<div class="form-group col">
+									<label for="exampleInputEmail1">Email address</label> <input
+										type="email" class="form-control" id="exampleInputEmail1"
+										aria-describedby="emailHelp" placeholder="Enter email">
+								</div>
+								<div class="form-group col">
+									<label for="exampleInputPassword1">Password</label> <input
+										type="password" class="form-control"
+										id="exampleInputPassword1" placeholder="Password">
+								</div>
+								<div class="form-group col">
+									<label for="exampleInputEmail1">Email address</label> <input
+										type="email" class="form-control" id="exampleInputEmail1"
+										aria-describedby="emailHelp" placeholder="Enter email">
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="col-3">
+							<div class="form-group col">
+								<div class="page-header">
+									<p>Father's Picture</p>
+								</div>
+							</div>
+							<div>
+								<div class="form-group col">
+									<img alt="Defualt Profile Picture"
+										th:src="@{/img/default-pic.png}" class="img-circle"
+										width="100px" height="100px"> <label
+										for="exampleFormControlFile1"></label> <input type="file"
+										class="form-control-file ldBtn" id="exampleFormControlFile1">
+								</div>
+							</div>
+							<div class="page-header">
+								<p>Mother's Picture</p>
+							</div>
+							<div>
+								<img alt="Defualt Profile Picture"
+									th:src="@{/img/default-pic.png}" class="img-circle"
+									width="100px" height="100px"> <label
+									for="exampleFormControlFile1"></label> <input type="file"
+									class="form-control-file ldBtn" id="exampleFormControlFile1">
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+
+	</div>
+
+
+</body>
+</html>

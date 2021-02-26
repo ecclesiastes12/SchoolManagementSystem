@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+
+</head>
+<body>
+	<div layout:fragment="content" class="container mySpace">
+		<!-- NB every page needs this tag for to be able to display -->
+
+		<div class="text-center">
+			<h2>Score Form</h2>
+		</div>
+		<div class="text-right"> 
+		<button class="btn btn-success">
+				<a href="/viewscores">view scores</a>
+			</button>
+		</div>
+		
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label for="student_number">Student ID</label> <input type="text"
+						class="form-control" id="student_number" placeholder="Student ID">
+				</div>
+				<div class="form-group col-md-4">
+					<label for="grade">Class</label> <select id="grade"
+						class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="term">Term</label> <select id="term"
+						class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputState">Core Subject 1</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputState">Elective Subject 1</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputState">Core Subject 2</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputState">Elective Subject 2</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputState">Core Subject 3</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputState">Elective Subject 3</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputState">Core Subject 4</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputState">Elective Subject 4</label> <select
+						id="inputState" class="form-control">
+						<option selected>Choose...</option>
+						<option>...</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Student Remarks</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1"
+					rows="3"></textarea>
+			</div>
+
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary btn-lg">Save</button>
+				<button type="submit" class="btn btn-secondary btn-lg">Cancel</button>
+			</div>
+
+		</form>
+
+	</div>
+
+
+</body>
+</html>

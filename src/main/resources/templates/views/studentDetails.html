@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+
+</head>
+<body>
+	<div layout:fragment="content" class="container mySpace">
+		<!-- NB every page needs this tag for to be able to display -->
+
+		<form method="post" th:object="${student}" th:action="@{/register}">
+			<div class="row">
+
+				<div class="col-3">
+					<div class="card cardspace shadow p-3 mb-5 bg-white rounded">
+						<h5 class="card-header">Student Enrollment</h5>
+						<div class="card-body">
+							<div class="form-row">
+
+								<div>
+									<div class="form-group col">
+										<img alt="Defualt Profile Picture"
+											th:src="@{/img/default-pic.png}" class="img-circle"
+											width="100px" height="100px">
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+				<div class="col-9">
+					<div class="card cardspace">
+						<div class=" card-body">
+
+							<div class="nav ">
+								<ul class="nav nav-tabs" id="myTab" role="tablist">
+									<li class="nav-item"><a class="nav-link active"
+										id="home-tab" data-toggle="tab" href="#home" role="tab"
+										aria-controls="home" aria-selected="true">Profile</a></li>
+									<li class="nav-item"><a class="nav-link" id="profile-tab"
+										data-toggle="tab" href="#profile" role="tab"
+										aria-controls="profile" aria-selected="false">Fees</a></li>
+									<li class="nav-item"><a class="nav-link" id="contact-tab"
+										data-toggle="tab" href="#contact" role="tab"
+										aria-controls="contact" aria-selected="false">Exams</a></li>
+								</ul>
+								<div class="ml-auto ">
+									<!-- ml-auto  float icons to the right. bootstrap 4 -->
+									<a href="#"><span class="btn btn-primary fa fa-pencil-alt"></span></a>
+									<a href="#"><span class="btn btn-primary fa fa-pencil-alt"></span></a>
+									<a href="#"><span class="btn btn-primary fa fa-pencil-alt"></span></a>
+								</div>
+							</div>
+
+
+							<div class="tab-content shadow p-3 mb-4 bg-white rounded"
+								id="myTabContent">
+								<div class="tab-pane fade show active" id="home" role="tabpanel"
+									aria-labelledby="home-tab">
+									
+									<div class="card cardspace shadow p-3 mb-4 bg-white rounded">
+						<h5 class="card-header">Student Enrollment</h5>
+						<div class="card-body">
+							<div class="form-row">
+
+								<div>
+									<div class="form-group col">
+										<img alt="Defualt Profile Picture"
+											th:src="@{/img/default-pic.png}" class="img-circle"
+											width="100px" height="100px">
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+					
+					<div class="card cardspace shadow p-3 mb-5 bg-white rounded">
+						<h5 class="card-header">Address</h5>
+						<div class="card-body">
+							<div class="form-row">
+
+								<div>
+									<div class="form-group col">
+										<img alt="Defualt Profile Picture"
+											th:src="@{/img/default-pic.png}" class="img-circle"
+											width="100px" height="100px">
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+					
+					<div class="card cardspace shadow p-3 mb-5 bg-white rounded">
+						<h5 class="card-header">Parent / Guardian Details</h5>
+						<div class="card-body">
+							<div class="form-row">
+
+								<div>
+									<div class="form-group col">
+										<img alt="Defualt Profile Picture"
+											th:src="@{/img/default-pic.png}" class="img-circle"
+											width="100px" height="100px">
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+								
+									
+									
+									</div>
+								<div class="tab-pane fade" id="profile" role="tabpanel"
+									aria-labelledby="profile-tab">Et et consectetur ipsum
+									labore excepteur est proident excepteur ad velit occaecat qui
+									minim occaecat veniam. Fugiat veniam incididunt anim aliqua
+									enim pariatur veniam sunt est aute sit dolor anim. Velit non
+									irure adipisicing aliqua ullamco irure incididunt irure non
+									esse consectetur nostrud minim non minim occaecat. Amet duis do
+									nisi duis veniam non est eiusmod tempor incididunt tempor dolor
+									ipsum in qui sit. Exercitation mollit si ad duis occaecat ex.</div>
+								<div class="tab-pane fade" id="contact" role="tabpanel"
+									aria-labelledby="contact-tab">Et et consectetur ipsum
+									labore excepteur est proident excepteur ad velit occaecat qui
+									minim occaecat veniam. Fugiat veniam incididunt anim aliqua
+									enim pariatur veniam sunt est aute sit dolor anim. Velit non
+									irure adipisicing aliqua ullamco irure incididunt irure non
+									esse consectetur nostrud minim non minim occaecat. Amet duis do
+									nisi duis veniam non est eiusmod tempor incididunt tempor dolor
+									ipsum in qui sit. Exercitation mollit si ad duis occaecat ex.</div>
+							</div>
+
+
+
+						</div>
+
+					</div>
+
+					
+
+				</div>
+
+
+
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	</div>
+
+
+</body>
+</html>

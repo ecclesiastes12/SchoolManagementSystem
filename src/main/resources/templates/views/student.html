@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Index Page</title>
+</head>
+<body>
+	<div layout:fragment="content" class="container mySpace">
+		
+		<form th:action="@{/register}"  th:object="${student}" method="post">
+			<div class="form-group">
+				<label for="stdid" class="form-control-label">Student Id</label>
+				<input type="text" class="form-control" id="stdid" th:field="*{studentid}" placeholder="eg. 123456" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('studentid')}"
+					th:errors="*{studentid}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="fname" class="form-control-label">First Name Id</label>
+				<input type="text" class="form-control" id="fname" th:field="*{firstname}" placeholder="eg. Jemes" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('firstname')}"
+					th:errors="*{firstname}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="lname" class="form-control-label"> Last Name</label>
+				<input type="text" class="form-control" id="lname" th:field="*{lastname}" placeholder="eg. Peterson" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('lastname')}"
+					th:errors="*{lastname}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="oname" class="form-control-label">Other Name</label>
+				<input type="text" class="form-control" id="oname" th:field="*{othername}" placeholder="eg. Rock" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('othername')}"
+					th:errors="*{othername}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="dob" class="form-control-label">Date of Birth</label>
+				<input type="text" class="form-control" id="dob" th:field="*{dob}" placeholder="eg. 12/02/1990" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('dob')}"
+					th:errors="*{dob}"></div>
+			</div>
+		
+			<div class="form-group">
+				
+				<input type="submit" value="Submit" />
+			</div>
+		</form>
+		
+		
+	</div>
+</body>
+</html>
