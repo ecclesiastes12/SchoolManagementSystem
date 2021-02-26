@@ -23,18 +23,17 @@ public class IndexController {
 		return "views/loginForm";
 	}
 
-	@RequestMapping("/student")
-	public String showLoginForm1() {
-		return "views/student";
-	}
+	/*
+	 * @RequestMapping("/student") public String showLoginForm1() { return
+	 * "views/student"; }
+	 */
 	
-	@RequestMapping("/ ")
-	//@PostMapping("/register")
-	public String showStudentDetailsForm() {
-		
-		
-		return "views/studentDetails";
-	}
-	
+	/*
+	 * @RequestMapping("/ ") //@PostMapping("/register") public String
+	 * showStudentDetailsForm() {
+	 * 
+	 * 
+	 * return "views/studentDetails"; }
+	 */
 
 }
